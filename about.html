@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <section id="about">
+            <h1>About Me</h1>
+            <p>My name is Samson Kipchumba, and I am a fifth-year student at Jomo Kenyatta University. I love coding and do it mostly in my free time.</p>
+            
+            <!-- Additional info toggle button -->
+            <button id="toggle-info-btn">Show More</button>
+            <div id="additional-info" style="display: none;">
+                <p>I am passionate about web development and enjoy working on projects that involve creating interactive and user-friendly interfaces.</p>
+                <p>In addition to coding, I also enjoy outdoor activities like hiking and playing sports.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <script>
+        // JavaScript for toggling additional information
+        const toggleBtn = document.getElementById('toggle-info-btn');
+        const additionalInfo = document.getElementById('additional-info');
+
+        toggleBtn.addEventListener('click', function() {
+            if (additionalInfo.style.display === 'none') {
+                additionalInfo.style.display = 'block';
+                toggleBtn.textContent = 'Show Less';
+            } else {
+                additionalInfo.style.display = 'none';
+                toggleBtn.textContent = 'Show More';
+            }
+        });
+    </script>
+</body>
+</html>
